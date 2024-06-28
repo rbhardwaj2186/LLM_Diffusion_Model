@@ -2,6 +2,9 @@
 
 ![images](https://github.com/rbhardwaj2186/LLM_Diffusion_Model/assets/143745073/a1b6aaed-a1c8-4fe1-a264-8e4a56c5347e)
 
+![x2](https://github.com/rbhardwaj2186/LLM_Diffusion_Model/assets/143745073/ea0ade5d-a862-41da-b568-f1212c7b49aa)
+
+
 
 ## Features of Our Repository
 
