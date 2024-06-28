@@ -1,5 +1,8 @@
 # Revolutionizing Text-to-Image Models with LLM-Grounded Diffusion
 
+![images](https://github.com/rbhardwaj2186/LLM_Diffusion_Model/assets/143745073/a1b6aaed-a1c8-4fe1-a264-8e4a56c5347e)
+
+
 ## Features of Our Repository
 
     SDXL Refiner: For generating high-resolution, high-quality images.
