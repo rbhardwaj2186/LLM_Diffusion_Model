@@ -26,7 +26,7 @@ Installation
 
 bash
 
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 
 Stage 1: Text-to-Layout Generation
 
@@ -36,13 +36,13 @@ Automated Method (OpenAI API Key Required):
 
 bash
 
-python prompt_batch.py --prompt-type demo --model gpt-4 --auto-query --always-save --template_version v0.1
+```python prompt_batch.py --prompt-type demo --model gpt-4 --auto-query --always-save --template_version v0.1```
 
 Manual Method (Using ChatGPT):
 
 bash
 
-python prompt_batch.py --prompt-type demo --model gpt-4 --always-save --template_version v0.1
+```python prompt_batch.py --prompt-type demo --model gpt-4 --always-save --template_version v0.1```
 
 Stage 2: Layout-to-Image Generation
 
@@ -50,7 +50,7 @@ No need to run stage 1 for provided cached prompts. Run layout-to-image generati
 
 bash
 
-python generate.py --prompt-type demo --model gpt-4 --save-suffix "gpt-4" --repeats 5 --frozen_step_ratio 0.5 --regenerate 1 --force_run_ind 0 --run-model lmd_plus --no-scale-boxes-default --template_version v0.1
+```python generate.py --prompt-type demo --model gpt-4 --save-suffix "gpt-4" --repeats 5 --frozen_step_ratio 0.5 --regenerate 1 --force_run_ind 0 --run-model lmd_plus --no-scale-boxes-default --template_version v0.1```
 
 Benchmark Evaluation
 
@@ -58,8 +58,8 @@ Use the following commands for benchmarking and evaluation:
 
 bash
 
-python prompt_batch.py --prompt-type lmd --model gpt-3.5 --auto-query --always-save --template_version v0.1
-python scripts/eval_stage_one.py --prompt-type lmd --model gpt-3.5 --template_version v0.1
+```python prompt_batch.py --prompt-type lmd --model gpt-3.5 --auto-query --always-save --template_version v0.1```
+```python scripts/eval_stage_one.py --prompt-type lmd --model gpt-3.5 --template_version v0.1```
 
 Frequently Asked Questions
 Using Open-Source LLMs
@@ -70,14 +70,14 @@ Setup:
 
 bash
 
-pip install fschat
+```pip install fschat```
 
-export FASTCHAT_WORKER_API_TIMEOUT=600
+```export FASTCHAT_WORKER_API_TIMEOUT=600```
 # Terminal 1
-python3 -m fastchat.serve.controller
+```python3 -m fastchat.serve.controller```
 # Terminal 2
-CUDA_VISIBLE_DEVICES=0,1 python3 -m fastchat.serve.model_worker --model-path mistralai/Mixtral-8x7B-Instruct-v0.1 --num-gpus 2 --max-gpu-memory 48GiB
+```CUDA_VISIBLE_DEVICES=0,1 python3 -m fastchat.serve.model_worker --model-path mistralai/Mixtral-8x7B-Instruct-v0.1 --num-gpus 2 --max-gpu-memory 48GiB```
 # Terminal 3
-python3 -m fastchat.serve.openai_api_server --host localhost --port 8000
+```python3 -m fastchat.serve.openai_api_server --host localhost --port 8000```
 
     
